@@ -1,0 +1,27 @@
+### API(w/h parameters)
+https://http-practice.herokuapp.com
+### API(status)
+https://http-practice.herokuapp.com/status
+###GET application status in json format
+https://http-practice.herokuapp.com/status
+Accept:application/json
+### GET app wilders
+ https://http-practice.herokuapp.com/wilders/1646363
+
+###POST
+POST https://http-practice.herokuapp.com/wilders
+Content-Type: application/json
+
+{
+  "name": "Jane Natalia",
+  "language": "JavaScript"
+}
+
+###PUT
+PUT https://http-practice.herokuapp.com/wilders/1646363
+Content-Type: application/json
+
+{
+  "name": "HI Longbeauty Natalia",
+  "language": "JavaScript"
+}
