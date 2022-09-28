@@ -9,13 +9,19 @@ body {
 }
 
 form {
-    display: block;
+    display: flex;
+    height: 500px;
     justify-content: center;
     width: 50%;
     margin: auto;
 }
 
-form div {
+form div.inner {
+    margin: auto;
+    width: 100%;
+}
+
+form div.field {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -50,4 +56,9 @@ p {
     width: 50%;
     font-size: 20px;
     margin: auto;
+}
+
+div.message {
+    display: flex;
+    height: 100%;
 }
