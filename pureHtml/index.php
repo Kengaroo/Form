@@ -31,6 +31,7 @@ if (isset($_POST) && !empty($_POST)) {
             $statement->bindValue(':' . $key, $value, \PDO::PARAM_STR);
         }
         $statement->execute();
+        header('Location: ');
     }
 }
 
