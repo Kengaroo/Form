@@ -13,7 +13,7 @@ $firstname = "Nata";
 
 $lastname = "Ne";
 
-
+/*
 $query = 'INSERT INTO friend (firstname, lastname) VALUES (:firstname, :lastname)';
 $statement = $pdo->prepare($query);
 $statement->bindValue(':firstname', $firstname, \PDO::PARAM_STR);
@@ -27,7 +27,7 @@ foreach ($friends as $friend) {
   echo '<pre>';
   print_r($friend);
   echo '</pre>';
-}
+} */
 ?>
 <!DOCTYPE html>
 <html>
