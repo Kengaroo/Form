@@ -1,3 +1,34 @@
+<?php
+require_once'_connect.php';
+$pdo = new \PDO(DB, USER, PASS);
+$query = "SELECT * FROM friend";
+$statement= $pdo->query($query);
+$friends = $statement->fetchAll();
+foreach ($friends as $friend) {
+  echo '<pre>';
+  print_r($friend);
+  echo '</pre>';
+}
+$firstname = "Nata"; 
+
+$lastname = "Ne";
+
+
+$query = 'INSERT INTO friend (firstname, lastname) VALUES (:firstname, :lastname)';
+$statement = $pdo->prepare($query);
+$statement->bindValue(':firstname', $firstname, \PDO::PARAM_STR);
+
+$statement->bindValue(':lastname', $lastname, \PDO::PARAM_STR);
+$statement->execute();
+
+
+$friends = $statement->fetchAll();
+foreach ($friends as $friend) {
+  echo '<pre>';
+  print_r($friend);
+  echo '</pre>';
+}
+?>
 <!DOCTYPE html>
 <html>
 
