@@ -1,38 +1,24 @@
 <?php
 require_once 'Bicycle.php';
 require_once 'Car.php';
+require_once 'Truck.php';
 
-$bike = new Bicycle("blue");
+$bicycle = new Bicycle('blue', 1);
+echo $bicycle->forward();
+var_dump($bicycle);
 
-$bike->setColor = 'blue';
-print_r($bike);
-$bike->setCurrentSpeed = 0;
-print_r($bike); 
-// Moving bike
-echo $bike->forward();
-echo '<br> Vitesse du vélo : ' . $bike->getCurrentSpeed() . ' km/h' . '<br>';
-echo $bike->brake();
-echo '<br> Vitesse du vélo : ' . $bike->getCurrentSpeed() . ' km/h' . '<br>';
-echo $bike->brake();
+$car = new Car('green', 4, 'electric');
+var_dump($car);
+echo $car->forward();
 
-// Instanciation d'un nouvel objet $rockrider
-$rockrider = new Bicycle("red");
-$rockrider->setColor = 'yellow';
-// Instanciation d'un nouvel objet $tornado
-$tornado = new Bicycle("green");
-$tornado->setColor = 'black';
-$tornado->forward();
+$truck1 = new Truck(20, 'black', 2, 'unknown');
+echo $truck1->forward();
+echo $truck1->brake();
+$truck1->setLoading(10);
+echo $truck1->isFull();
+var_dump($truck1);
 
-echo "<br/><br/>CAR SECTION<br/>";
-$car = new Car("blue" ,5, 'High');
-$car->setColor = 'blue';
-print_r($car);
-$car->setCurrentSpeed = 0;
-print_r($car); 
-// Moving bike
-echo $car->start(10);
-echo $car->forward(20);
-echo '<br> Vitesse du voitur : ' . $car->getCurrentSpeed() . ' km/h' . '<br>';
-echo $car->brake();
-echo '<br> Vitesse du vélo : ' . $car->getCurrentSpeed() . ' km/h' . '<br>';
-echo $car->brake();
+$truck3 = new Truck(10, 'yellow', 2, 'high');
+$truck3->setLoading(15);
+echo $truck3->isFull();
+var_dump($truck3);
