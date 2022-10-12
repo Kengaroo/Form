@@ -1,0 +1,14 @@
+{
+    "name": "amidala/composer-study",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Natalia"
+        }
+    ],
+    "require": {}
+}
