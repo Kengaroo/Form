@@ -5,6 +5,7 @@ class Car extends Vehicle
 {
     private string $energy;
     private int $energyLevel;
+    private bool $hasParkBrake = true;
     public const ALLOWED_ENERGIES = [
 
         'fuel',
@@ -42,7 +43,10 @@ class Car extends Vehicle
 
     public function start(int $startSpeed = 15) : string
     {
-        $this->currentSpeed = $startSpeed;
+        if ($this->hasParkBrake) {
+            throw  new Exception("Brake is activ");
+        }
+        $this->currentSpeed = $startSpeed;    
         return "<br/>Go !<br/>";
     }  
 
@@ -62,4 +66,25 @@ class Car extends Vehicle
         $sentence .= "I'm stopped !";
         return $sentence;
     }   
+
+
+
+    /**
+     * Set the value of hasParkBrake
+     *
+     * @return  self
+     */ 
+    public function setParkBrake($hasParkBrake)
+    {
+        $this->hasParkBrake = $hasParkBrake;
+        return $this;
+    }
+
+    /**
+     * Get the value of hasParkBrake
+     */ 
+    public function getParkBrake()
+    {
+        return $this->hasParkBrake;
+    }
 }
