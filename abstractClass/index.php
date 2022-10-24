@@ -9,5 +9,5 @@ try {
 } finally {
     echo '<br/>Ma voiture roule comme un donut';
 }
-var_dump($bmw);
+
 echo '<br/>Value of Park brake is '. ($bmw->getParkBrake() ? 'true' : 'false');
